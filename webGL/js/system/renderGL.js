@@ -1,0 +1,32 @@
+function RendererGL(){
+	
+	this.device;
+	
+	this.Init = function(){
+		var ctext = document.getElementById('canvas');
+		
+		// スクリーンサイズ指定
+		ctext.width = 500;
+		ctext.height = 300;
+		
+		// コンテキスト取得
+		var gl = ctext.getContext('webgl') || ctext.getContest('experimental-wevgl');
+		
+		// canvasを黒でクリア
+		gl.clearColor(0,0,0,1);
+		gl.clear(gl.COLOR_BUFFER_BIT);
+		
+		this.device = gl;
+	}
+	
+	this.Uninit = function(){
+		
+	}
+}
+
+
+RendererGL.Create = function(){
+	var ptr = new RendererGL();
+	ptr.Init();
+	return ptr;
+}
