@@ -62,7 +62,7 @@ function vector2(x,y){
 }
 
 function vector3(x, y, z){
-	this.x =0.0;
+	this.x = 0.0;
 	this.y = 0.0;
 	this.z = 0.0;
 	

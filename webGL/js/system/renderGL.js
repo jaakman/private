@@ -6,11 +6,11 @@ function RendererGL(){
 		var ctext = document.getElementById('canvas');
 		
 		// スクリーンサイズ指定
-		ctext.width = 500;
+		ctext.width = 300;
 		ctext.height = 300;
 		
 		// コンテキスト取得
-		var gl = ctext.getContext('webgl') || ctext.getContest('experimental-wevgl');
+		var gl = ctext.getContext('webgl') || ctext.getContext('experimental-webgl');
 		
 		// canvasを黒でクリア
 		gl.clearColor(0,0,0,1);

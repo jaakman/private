@@ -1,9 +1,9 @@
 function Shader(){
-	this.shader = null;
+	this.vtxshader = null;
+	this.frgshader = null;
+	this.program = null;
 	
-	this.Init = function(id){
-		
-	}
+	this.Init = function(id){}
 	
 	
 	/***
@@ -12,10 +12,10 @@ function Shader(){
 	 * */
 	this.createShader = function(id){
 		var shader;
-		var gl = g_renererGL;
+		var gl = g_rendererGL.device;
 		
 		// シェーダを取得
-		var scriptElement = document.getElementByID(id);
+		var scriptElement = document.getElementById(id);
 		
 		// シェーダが存在しない場合抜ける
 		if(!scriptElement){return;}
@@ -40,7 +40,7 @@ function Shader(){
 		}
 		
 		// 生成したシェーダにソースを割り当て
-		gl.shaderSource( shader, scriptElement.text );
+		gl.shaderSource( shader, scriptElement.textContent );
 		// シェーダをコンパイル
 		gl.compileShader(shader);
 		
@@ -60,13 +60,13 @@ function Shader(){
 	 * @param	fs	フラグメントシェーダポインタ
 	 * */
 	this.createProgram = function(vs, fs){
-		var gl = g_renererGL;
+		var gl = g_rendererGL.device;
 		// プログラムオブジェ作成
 		var prg = gl.createProgram();
 		
 		// プログラムオブジェにシェーダ割り当て
 		gl.attachShader(prg, vs);
-		gl.attachShader( prg, fs);
+		gl.attachShader(prg, fs);
 		
 		// シェーダをリンク
 		gl.linkProgram(prg);
