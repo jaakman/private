@@ -1,6 +1,6 @@
 function Shader(){
-	this.vtxshader = null;
-	this.frgshader = null;
+	this.vertex = null;
+	this.fragment = null;
 	this.program = null;
 	
 	this.Init = function(id){}

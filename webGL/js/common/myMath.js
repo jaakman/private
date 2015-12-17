@@ -1,8 +1,10 @@
+vector3.a = function(x,y,z){
+	var p = new vector3(x,y,z);
+	return p; 
+}
+
+
 function vector2(x,y){
-	this.x = 0.0;
-	this.y = 0.0;
-	
-	if(x != undefined){ this.set(x,y); }
 	
 	this.set = function(x,y){
 		if(y == undefined){
@@ -59,14 +61,15 @@ function vector2(x,y){
 			this.y /= y;
 		}
 	}
+	
+	
+	this.x = 0.0;
+	this.y = 0.0;
+	
+	if(x != undefined){ this.set(x,y); }
 }
 
 function vector3(x, y, z){
-	this.x = 0.0;
-	this.y = 0.0;
-	this.z = 0.0;
-	
-	if(x != undefined){ this.set(x,y,z); }
 	
 	this.set = function(x,y,z){
 		
@@ -138,17 +141,17 @@ function vector3(x, y, z){
 		}
 	}
 	
+	this.x = 0.0;
+	this.y = 0.0;
+	this.z = 0.0;
+	
+	if(x != undefined){ this.set(x,y,z); }
+	
 }
 
 
 
 function vector4(x, y, z,w){
-	this.x =0.0;
-	this.y = 0.0;
-	this.z = 0.0;
-	this.w = 0.0;
-	
-	if(x != undefined){ this.set(x,y,z,w); }
 	
 	this.set = function(x,y,z,w){
 		
@@ -283,6 +286,13 @@ function vector4(x, y, z,w){
 			this.w /= w;
 		}
 	}
+	
+	this.x =0.0;
+	this.y = 0.0;
+	this.z = 0.0;
+	this.w = 0.0;
+	
+	if(x != undefined){ this.set(x,y,z,w); }
 	
 }
 

@@ -37,7 +37,9 @@ var g_srcfiles = [
 	['common/glib.js', TYPE.JS],
 	['common/minMatrix.js', TYPE.JS],
 	['system/renderGL.js', TYPE.JS],
-	['system/shader.js', TYPE.JS],	
+	['system/camera.js', TYPE.JS],
+	['system/shader.js', TYPE.JS],
+	['object/object3d.js', TYPE.JS],	
 	['main.js', TYPE.JS]
 ];
 

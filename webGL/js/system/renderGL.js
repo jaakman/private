@@ -22,6 +22,10 @@ function RendererGL(){
 	this.Uninit = function(){
 		
 	}
+	
+	this.Render = function(){
+		 this.device.flush();
+	}
 }
 
 

@@ -7,9 +7,9 @@
 		<script>Includes(g_srcfiles);</script>
 		<script id='vs' type='x-shader/x-vertex'>	
 		attribute vec3 position;
-		uniform   mat4 mvpMatrix;
+		uniform   mat4 wvpMatrix;
 		void main(void){
-			gl_Position = mvpMatrix * vec4(position, 1.0);
+			gl_Position = wvpMatrix * vec4(position, 1.0);
 		}
 		</script>
 		<script id="ps" type="x-shader/x-fragment">
