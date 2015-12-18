@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ファイル読み込み</title>
+	</head>
+	<body>
+		<a id='vs' type='text/plain' href='GLSL/vs/sample01.txt'></a>
+		
+		<script>
+			var file = document.getElementById('vs');
+			
+			console.log(file.type.indexOf('text'));
+		</script>
+		
+	</body>
+</html>
